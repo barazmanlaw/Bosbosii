@@ -1,6 +1,6 @@
-name = "bosbosiiapp"
-main = ".vercel/output/static/_worker.js"
-compatibility_date = "2024-09-23"
+name = "bosbosiiam"
+main = ".vercel/output/static/_worker.js/index.js"
+compatibility_date = "2026-08-15"
 compatibility_flags = ["nodejs_compat"]
 
 [assets]
