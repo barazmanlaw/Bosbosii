@@ -1,8 +1,6 @@
 import { Anthropic } from '@anthropic-ai/sdk';
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
-});
+const anthropic = new Anthropic();
 
 export interface ChatMessage {
   role: 'user' | 'assistant';
@@ -19,7 +17,7 @@ export class BosbosaiAI {
   async getResponse(messages: ChatMessage[]): Promise<string> {
     try {
       const response = await anthropic.messages.create({
-        model: 'claude-3-5-sonnet-20241022',
+        model: 'claude-sonnet-5',
         max_tokens: 1024,
         system: this.systemPrompt,
         messages: messages.map((m) => ({
